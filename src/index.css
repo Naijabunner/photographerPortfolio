@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Landing_page_btn{
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+.img{
+  background-image: url("./assets/great.jpeg");
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
