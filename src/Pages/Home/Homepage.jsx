@@ -4,7 +4,7 @@ const Homepg = () => {
       <section className="flex max-h-screen w-screen relative">
         <div className="bg-white w-0 sm:w-[60vw] flex justify-center items-center">
           <div className="">
-            <h2 className="text-[5vw] font-bold">
+            <h2 className="text-[7vw] font-bold">
               My name is
               <br />
               James Onyekachi
@@ -14,36 +14,37 @@ const Homepg = () => {
             </p>
             <div className="btns flex justify-evenly mt-2">
               <a href="/portfolio">
-                <button className="Landing_page_btn bg-black text-white font-medium text-[2vw]">
+                <button className="Landing_page_btn bg-black text-white font-bold text-[3vw]">
                   Portfolio
                 </button>
               </a>
               <a href="/contact">
-                <button className="Landing_page_btn bg-gray-300 text-black font-medium text-[2vw] p-10">
+                <button className="Landing_page_btn bg-gray-300 text-black font-bold text-[3vw] p-10">
                   Contact Me
                 </button>
               </a>
             </div>
           </div>
         </div>
-        <div className="img w-[100vw] sm:w-[40vw] max-h-screen min-h-screen flex justify-center items-end">
+        {/* smaller screens */}
+        <div className="img w-[100vw] sm:w-[40vw] max-h-screen min-h-screen flex justify-center items-end pb-10">
           <div className="mb-10 sm:hidden">
-            <h2 className="text-[10vw] font-bold text-white">
+            <h2 className="text-[12vw] font-bold text-white">
               My name is
               <br />
               James Onyekachi
             </h2>
-            <p className=" text-[4vw] text-center text-white my-5">
+            <p className=" text-[6vw] text-center text-white my-5">
               And am showing you the world through the lens
             </p>
             <div className="btns flex justify-evenly mt-4 text-white">
               <a href="/portfolio">
-                <button className="Landing_page_btn bg-white text-black font-medium text-[4vw]">
+                <button className="Landing_page_btn bg-white text-black font-bold text-[5vw]">
                   Portfolio
                 </button>
               </a>
               <a href="/contact">
-                <button className="Landing_page_btn bg-gray-300 text-black font-medium text-[4vw] p-10">
+                <button className="Landing_page_btn backdrop-blur-xl text-black font-bold text-[5vw] p-10">
                   Contact Me
                 </button>
               </a>
