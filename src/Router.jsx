@@ -1,21 +1,17 @@
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Homepg from "./Pages/Home/Homepage";
-import ContactUs from "./Pages/Contact/Contactpage";
-import PortfolioPage from "./Pages/Portfolio/PortfolioPg";
+
+import LocationProvider from "./LocationProvider";
+import RoutesWithAnimation from "./AnimatedRoutes";
 const RoutedPages = () => {
-    return ( <>
-    
-    <Router>
-        <Routes>
-             <Route path="/" element = {<Homepg/>}/>
-             <Route path="/contact" element = {<ContactUs/>}/>
-             <Route path="/portfolio" element = {<PortfolioPage/>}/>
-        </Routes>
-       
-    </Router>
-    
-    </> );
-}
- 
+  return (
+    <>
+        <Router>
+            <LocationProvider>
+            <RoutesWithAnimation/>
+          </LocationProvider>
+        </Router>
+    </>
+  );
+};
+
 export default RoutedPages;
