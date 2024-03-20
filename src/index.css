@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: "Rouge Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 .Landing_page_btn{
   padding: 2px 10px;
   border-radius: 4px;
@@ -12,4 +17,17 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#sliderImgWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sliderImg{
+  display: flex;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

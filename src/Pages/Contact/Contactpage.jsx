@@ -18,11 +18,11 @@ const ContactUs = () => {
             <h1 className="text-[10vw] font-bold ">
                 Write me @
             </h1>
-            <a href="" className=" decoration-violet-600 underline text-[3vw] text-center w-100%">blahblahbalha@gmail.com</a>
+            <a href="" className=" decoration-violet-600 underline text-[3.5vw] text-center w-100%">blahblahbalha@gmail.com</a>
             <h2 className="text-[10vw] font-bold mt-5 pt-2 border-t-2 border-t-black w-screen">
                 Call Me
             </h2>
-            <a href="" className=" decoration-red-600 underline text-[3vw]">34567890-4567</a>
+            <a href="" className=" decoration-red-600 underline text-[3.5vw]">34567890-4567</a>
             <p className="text-[7vw] font-bold border-t-2 border-t-black w-screen mt-10">Can also reach out on</p>
             <div className="socialMedia flex flex-wrap justify-evenly items-center">
                 <a href="/contact" className="text-[10vmin] p-2 m-2">Instagram </a>

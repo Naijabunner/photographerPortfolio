@@ -10,9 +10,9 @@ const Homepg = () => {
                 </h2>
                 <p className=" text-[2vw] text-center my-5">And am showing you the world through my lens</p>
                 <div className="btns flex justify-evenly mt-2">
-                    <button className="Landing_page_btn bg-black text-white font-medium text-[2vw]">
+                    <a href="/portfolio"><button className="Landing_page_btn bg-black text-white font-medium text-[2vw]">
                             Portfolio
-                    </button>
+                    </button></a>
                     <a href="/contact">
                     <button className="Landing_page_btn bg-gray-300 text-black font-medium text-[2vw] p-10">
                             Contact Me
@@ -28,9 +28,9 @@ const Homepg = () => {
                 </h2>
                 <p className=" text-[4vw] text-center text-white my-5">And am showing you the world through the lens</p>
                 <div className="btns flex justify-evenly mt-4 text-white">
-                    <button className="Landing_page_btn bg-white text-black font-medium text-[4vw]">
+                    <a href="/portfolio"><button className="Landing_page_btn bg-white text-black font-medium text-[4vw]">
                             Portfolio
-                    </button>
+                    </button></a>
                     <a href="/contact">
                     <button className="Landing_page_btn bg-gray-300 text-black font-medium text-[4vw] p-10">
                             Contact Me
