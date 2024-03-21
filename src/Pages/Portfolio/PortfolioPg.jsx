@@ -61,7 +61,7 @@ const PortfolioPage = () => {
           >
             <SwiperSlide id="sliderImgWrapper" className=" w-fit relative">
               <div id="sliderImg" className="w-fit h-[85%] relative">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
                 <div className="w-[60%] h-[30%] backdrop-blur-3xl bottom-3 right-2 rounded-md absolute pl-2">
                     <h6>
                         Image title
@@ -77,41 +77,41 @@ const PortfolioPage = () => {
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy' />
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit ">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
               </div>
             </SwiperSlide>
             
            
             {/* <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" loading='Lazy'/>
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />

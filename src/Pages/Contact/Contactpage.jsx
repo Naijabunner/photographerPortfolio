@@ -48,7 +48,14 @@ const ContactUs = () => {
               exit={{ scale: 0.5, x: "-100%", opacity: 1 }}
             >
               <p className="block md:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" onClick={HandleToggle}className=" w-7 fill-white mt-3 ml-5 cursor-pointer"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  onClick={HandleToggle}
+                  className=" w-7 fill-white mt-3 ml-5 cursor-pointer"
+                >
+                  <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+                </svg>
               </p>
               <section className="  text-white flex justify-center items-center flex-col h-[80vh] text-3xl">
                 <a
@@ -78,17 +85,17 @@ const ContactUs = () => {
           <h1 className="text-[10vw] font-bold ">Write me @</h1>
           <a
             href=""
-            className=" decoration-violet-600 underline text-[3.5vw] text-center w-100%"
+            className=" decoration-violet-600  text-violet-600 font-sans font-bold underline text-[5vw] text-center w-100%"
           >
             blahblahbalha@gmail.com
           </a>
-          <h2 className="text-[10vw] font-bold mt-5 pt-2 border-t-2 border-t-black w-screen">
+          <h2 className="text-[10vw] font-bold  pt-2 border-t-2 border-t-black w-screen">
             Call Me
           </h2>
-          <a href="" className=" decoration-red-600 underline text-[3.5vw]">
+          <a href="" className=" text-[5vw]  text-blue-600 font-sans font-bold">
             34567890-4567
           </a>
-          <p className="text-[7vw] font-bold border-t-2 border-t-black w-screen mt-10">
+          <p className="text-[7vw] font-bold border-t-2 border-double border-t-black w-screen ">
             Can also reach out on
           </p>
           <div className="socialMedia flex flex-wrap justify-evenly items-center">
@@ -109,7 +116,18 @@ const ContactUs = () => {
             </a>
           </div>
         </main>
+         <motion.div
+        className=" w-[25vmin] h-[25vmin] fixed bg-gray-500 opacity-[0.1] z-[-1] top-[50%] bottom[50%] left-[40vw] right-[10vw] "
+        whileInView={{
+          scale: [1, 2, 2, 1, 1],
+          rotate: [0, 0, 270, 270, 0],
+          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          
+        }}
+        transition={{repeat:Infinity, duration:2 }}
+      />
       </section>
+     
     </>
   );
 };

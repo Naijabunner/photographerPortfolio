@@ -2,13 +2,12 @@ import {stagger, AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import img from "../../assets/great.jpeg";
 const Homepg = () => {
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   if (loader) {
     setTimeout(() => {
       setLoader(false);
     }, 1000);
   }
-  const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
   return (
     <>
