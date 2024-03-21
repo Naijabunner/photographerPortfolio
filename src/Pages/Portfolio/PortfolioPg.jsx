@@ -16,10 +16,20 @@ const PortfolioPage = () => {
     return (
       <>
         <nav className="absolute left-5 top-5 flex justify-between items-center bg-none w-[90%]">
+
           <a href="/">
-            {" "}
-            <h1 className=" text-5xl font-bold">JO</h1>
-          </a>
+        {" "}
+        <h1 className=" text-5xl font-bold text-gray-400 ">
+          JO
+        </h1>
+      </a>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute top-1 left-16 w-5 fill-gray-400  dark:fill-dark text-5xl font-bold text-gray-400"
+        viewBox="0 0 384 512"
+      >
+        <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" />
+      </svg>
 
           <div className="navLinks text-3xl font-medium md:flex justify-center items-center  hidden">
             <a href="/">
@@ -39,9 +49,12 @@ const PortfolioPage = () => {
         </nav>
         
         <main id="main" className=" flex  mt-12 overflow-hidden ">
-        <h2 className='text-3xl mt-5 ml-10 font-semibold '>
+        <h2 className='text-3xl mt-5 ml-10 font-semibold text-center flex justify-center items-center'>
+
             PORTFOLIO
+
         </h2>
+
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
@@ -57,11 +70,11 @@ const PortfolioPage = () => {
             navigation={true}
             pagination={true}
             modules={[EffectCoverflow, Pagination, Navigation]}
-            className="mySwiper sm:h-[80vh] w-screen  h-[60vh] pb-10"
+            className="mySwiper sm:h-[80vh] w-screen  h-[70vh]  border-8 p-5 border-black border-opacity-[0.3] shadow-inner rounded-md  backdrop-blur-3xl border-double"
           >
-            <SwiperSlide id="sliderImgWrapper" className=" w-fit relative">
-              <div id="sliderImg" className="w-fit h-[85%] relative">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+            <SwiperSlide id="sliderImgWrapper" className=" w-fit relative bg-transparent">
+              <div id="sliderImg" className="w-fit h-[85%] relative bg-transparent">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
                 <div className="w-[60%] h-[30%] backdrop-blur-3xl bottom-3 right-2 rounded-md absolute pl-2">
                     <h6>
                         Image title
@@ -77,41 +90,41 @@ const PortfolioPage = () => {
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy' />
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
               </div>
             </SwiperSlide>
             <SwiperSlide id="sliderImgWrapper" className=" w-fit ">
               <div id="sliderImg" className="w-fit h-[85%]">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
               </div>
             </SwiperSlide>
             
            
             {/* <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" loading='Lazy'/>
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" loading='Lazy'/>
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />

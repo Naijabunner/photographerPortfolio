@@ -23,6 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: fit-content;
+  margin: 5px;
 }
 #sliderImg{
   display: flex;

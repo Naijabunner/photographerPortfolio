@@ -21,6 +21,10 @@ function App() {
         }
       >
         <RoutedPages />
+        <footer>
+     <p className="absolute bottom-0 w-full bg-transparent text-center text-[3vmin] font-medium font-serif">James Onyekachi &copy; 2024</p>
+
+     </footer>
       </Suspense>
       
     </>
