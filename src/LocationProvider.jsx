@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 
 function LocationProvider({ children }) {
-    return <AnimatePresence>{children}</AnimatePresence>;
+    return <AnimatePresence mode="popLayout" initial={false}>{children}</AnimatePresence>;
   }
  
 export default LocationProvider ;
