@@ -48,14 +48,19 @@ const Homepg = () => {
             </p>
             <div className="btns flex justify-evenly mt-4 text-white">
               <a href="/portfolio">
-                <button className="Landing_page_btn bg-white text-black font-bold text-[5vw]">
+                <motion.button className="Landing_page_btn bg-white text-black font-bold text-[5vw]"
+                whileHover={{scale:1.1}}
+                whileTap={{scale:0.8}}
+                >
                   Portfolio
-                </button>
+                </motion.button>
               </a>
               <a href="/contact">
-                <button className="Landing_page_btn backdrop-blur-xl text-black font-bold text-[5vw] p-10">
+                <motion.button className="Landing_page_btn backdrop-blur-xl text-black font-bold text-[5vw] p-10"
+                whileHover={{scale:1.1}}
+                whileTap={{scale:0.8}}>
                   Contact Me
-                </button>
+                </motion.button>
               </a>
             </div>
           </div>
