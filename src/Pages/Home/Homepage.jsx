@@ -1,6 +1,6 @@
 import {stagger, AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import img from "../../assets/great.jpeg";
+import img  from "../../assets/great.jpeg";
 const Homepg = () => {
   const [loader, setLoader] = useState(false);
   if (loader) {
@@ -66,7 +66,7 @@ const Homepg = () => {
         </div>
       </div>
       {/* smaller screens */}
-      <div className="img w-[100vw] sm:w-[40vw] max-h-screen min-h-screen flex justify-center items-end pb-10">
+      <div className="img  w-[100vw] sm:w-[40vw] max-h-screen min-h-screen flex justify-center items-end pb-10">
         <div className="mb-10 sm:hidden">
           <h2 className="text-[12vw] font-bold text-white">
             My name is
