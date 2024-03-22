@@ -12,9 +12,11 @@ function App() {
         {" "}
         <div className="w-40 h-2 rounded-xl bg-black flex justify-center items-center">
           <motion.div className="loader bg-white w-14 rounded-xl h-1 "
-          initial={{x:-50 }}
-          animate={{ x: 50}}
-          transition={{ duration: 1, repeat: Infinity}}
+            whileInView={{ 
+              x: [-50,50,-50],
+            }}
+            transition={{duration: 2, repeat: Infinity, spring: 1}}
+            
           ></motion.div>
         </div>
       </div>
