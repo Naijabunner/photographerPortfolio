@@ -56,6 +56,11 @@ const PortfolioPage = () => {
         </h2>
 
           <Swiper
+          style={{
+            '--swiper-navigation-color': '#000',
+            '--swiper-pagination-color': '#000',
+          }}
+          lazy={true}
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
