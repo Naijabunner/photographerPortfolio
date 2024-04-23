@@ -32,20 +32,20 @@ const Homepg = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="bg-white w-0 sm:w-[60vw] flex justify-center items-center">
+      <div className=" w-0 sm:w-[60vw] flex justify-center items-center ">
         <div className="">
-          <h2 className="text-[7vw] font-bold">
+          <h2 className="text-[7vw] font-bold dark:text-white">
             My name is
             <br />
             James Onyekachi
           </h2>
-          <p className=" text-[2vw] text-center my-5">
-            And am showing you the world through my lens
+          <p className=" text-[2vw] text-center my-5 dark:text-[#fff]">
+            And am showing you the world, through my lens
           </p>
           <div className="btns flex justify-evenly mt-2">
             <a href="/portfolio">
               <motion.button
-                className="Landing_page_btn bg-black text-white font-bold text-[3vw]"
+                className="Landing_page_btn bg-black text-white font-bold text-[3vw] dark:bg-[#fff] dark:text-[#0E0F10]"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
                 
@@ -55,11 +55,20 @@ const Homepg = () => {
             </a>
             <a href="/contact">
               <motion.button
-                className="Landing_page_btn bg-gray-300 text-black font-bold text-[3vw] p-10"
+                className="Landing_page_btn bg-gray-300 text-black font-bold text-[3vw] p-10 dark:bg-[#323232] dark:text-[#ffff]"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
               >
                 Contact Me
+              </motion.button>
+            </a>
+            <a href="/About">
+              <motion.button
+                className="Landing_page_btn bg-gray-300 text-black font-bold text-[3vw] p-10 dark:bg-[#323232] dark:text-[#ffff]"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}
+              >
+                About
               </motion.button>
             </a>
           </div>
@@ -74,12 +83,12 @@ const Homepg = () => {
             James Onyekachi
           </h2>
           <p className=" text-[6vw] text-center text-white my-5">
-            And am showing you the world through the lens
+            And am showing you the world, through the lens
           </p>
           <div className="btns flex justify-evenly mt-4 text-white">
             <a href="/portfolio">
               <motion.button
-                className="Landing_page_btn bg-white text-black font-bold text-[5vw]"
+                className="Landing_page_btn bg-white text-black font-bold text-[5vw] "
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
               >
@@ -92,7 +101,16 @@ const Homepg = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.8 }}
               >
-                Contact Me
+                Contact
+              </motion.button>
+            </a>
+            <a href="/About">
+              <motion.button
+                className="Landing_page_btn backdrop-blur-xl text-black font-bold text-[5vw] p-10"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}
+              >
+                About
               </motion.button>
             </a>
           </div>

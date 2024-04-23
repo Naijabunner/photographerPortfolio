@@ -1,6 +1,6 @@
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../../Nav";
 import "swiper/css";
@@ -9,23 +9,30 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const PortfolioPage = () => {
-  const [isvisible, setIsvisible] = useState(false);
-  const HandleToggle = () => {
-    setIsvisible((prev) => !prev);
-  };
+  const [theme, setTheme] =useState("light")
+  useEffect(()=>{
+    const themeMode = sessionStorage.getItem("mode");
+    const parsethemeMode= JSON.parse(themeMode);
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches || parsethemeMode === "dark") {
+  setTheme("dark")
+}
+  },[theme])
+ 
   return (
-    <>
+    <section className="  overflow-hidden h-[95.4vh]">
    <Navbar/>
 
-      <main id="main" className=" flex  mt-12 overflow-hidden ">
-        <h2 className="text-3xl mt-5 ml-10 font-semibold text-center flex justify-center items-center">
+      <main id="main" className=" flex overflow-hidden mt-12 ">
+        <h2 className="text-3xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
           PORTFOLIO
         </h2>
 
         <Swiper
           style={{
-            "--swiper-navigation-color": "#000",
-            "--swiper-pagination-color": "#000",
+            
+            "--swiper-navigation-color": theme=== "light"?"#000":"#fff",
+            "--swiper-pagination-color": theme=== "light"?"#000":"#fff",
           }}
           lazy={true}
           effect={"coverflow"}
@@ -42,7 +49,7 @@ const PortfolioPage = () => {
           navigation={true}
           pagination={true}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="mySwiper sm:h-[80vh] w-screen  h-[70vh]  border-8 p-5 border-black border-opacity-[0.3] shadow-inner rounded-md  backdrop-blur-3xl border-double"
+          className="mySwiper sm:h-[70vh] w-screen  h-[70vh]  border-8 p-5 m-5 border-black border-opacity-[0.3] shadow-inner rounded-md  backdrop-blur-3xl border-double dark:border-white"
         >
           <SwiperSlide
             id="sliderImgWrapper"
@@ -118,7 +125,7 @@ const PortfolioPage = () => {
         </Swiper>
       </main>
       
-    </>
+    </section>
   );
 };
 
