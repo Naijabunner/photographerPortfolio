@@ -2,25 +2,25 @@ import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { FaPhone } from "react-icons/fa";
-import { SiWhatsapp, SiTiktok, SiInstagram, SiDiscord, SiX, SiGmail, SiLinkedin} from "react-icons/si";
+import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
+import image from "../../public/Logo.png"
 
- const ContactUs = () => {
+export const HomeGrid = () => {
   return (
-    <div className="min-h-screen bg-zinc-900 px-4 py-12 pt-20 text-zinc-50">
-      <h2 className="text-3xl font-mono first-letter:text-4xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
-          REACH OUT TO ME
-        </h2>
-        <motion.div
+    <div className="min-h-screen bg-zinc-900 px-4 py-12 pt-24 text-zinc-50">
+      <motion.div
         initial="initial"
         animate="animate"
         transition={{
           staggerChildren: 0.05,
         }}
-        className="mx-auto mt-5 grid max-w-7xl grid-flow-dense grid-cols-12 gap-4"
-      >      
-      
+        className="mx-auto grid max-w-7xl grid-flow-dense grid-cols-12 gap-4"
+      >
+        <HeaderBlock />
         <SocialsBlock />
+        <AboutBlock />
+        <LocationBlock />
+        <GalleryBlock />
       </motion.div>
       <Footer />
     </div>
@@ -56,6 +56,30 @@ const Block = ({ className, ...rest }) => {
     />
   );
 };
+
+const HeaderBlock = () => (
+  <Block className="col-span-12 row-span-2 md:col-span-6">
+    <img
+      src={image}
+      alt="avatar"
+      className="mb-4 size-14 rounded-full"
+    />
+    <h1 className="mb-12 text-5xl font-medium leading-tight">
+      Hi, I'm James Onyekachi.{" "}
+      <span className="text-zinc-400">
+      And am showing you the world, through my lens
+
+      </span>
+    </h1>
+    <a
+      href="/contact"
+      className="flex items-center gap-1 text-2xl text-red-300 hover:underline"
+    >
+      Contact me <FiArrowRight />
+    </a>
+  </Block>
+);
+
 const SocialsBlock = () => (
   <>
     <Block
@@ -69,7 +93,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiDiscord />
+        <SiYoutube />
       </a>
     </Block>
     <Block
@@ -83,7 +107,7 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiWhatsapp />
+        <SiGithub />
       </a>
     </Block>
     <Block
@@ -105,73 +129,48 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-pink-500 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiInstagram />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-red-300 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiGmail />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-orange-500  md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <FaPhone />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
       className="col-span-6 bg-blue-500 md:col-span-3"
     >
       <a
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiLinkedin />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-slate-500 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiX />
+        <SiTwitter />
       </a>
     </Block>
   </>
 );
+
+const AboutBlock = () => (
+  <Block className="col-span-12 text-3xl leading-snug">
+    <p>
+      My passion is building cool stuff.{" "}
+      <span className="text-zinc-400">
+        I build primarily with React, Tailwind CSS, and Framer Motion. I love
+        this stack so much that I even built a website about it. I've made over
+        a hundred videos on the subject across YouTube and TikTok.
+      </span>
+    </p>
+  </Block>
+);
+
+const LocationBlock = () => (
+  <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
+    <FiMapPin className="text-3xl" />
+    <p className="text-center text-2xl text-zinc-400">Lagos, Nigeria</p>
+  </Block>
+);
+
+const GalleryBlock = () => (
+  <Block className="col-span-12 md:col-span-9 md:flex justify-between align-middle text-4xl">
+    <p> Take a look at some my work....</p>
+    <h2 className=" hover:cursor-pointer hover:text-red-300 hover:underline">
+    My Gallery
+        <FiArrowRight />
+    </h2>
+  </Block>
+);
+
 const Footer = () => {
   return (
     <footer className="mt-12">
@@ -184,4 +183,3 @@ const Footer = () => {
     </footer>
   );
 };
-export default ContactUs;

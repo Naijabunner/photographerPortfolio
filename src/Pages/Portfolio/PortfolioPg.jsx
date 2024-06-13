@@ -9,124 +9,225 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const PortfolioPage = () => {
-  const [theme, setTheme] =useState("light")
-  useEffect(()=>{
+  const [theme, setTheme] = useState("light");
+  useEffect(() => {
     const themeMode = sessionStorage.getItem("mode");
-    const parsethemeMode= JSON.parse(themeMode);
+    const parsethemeMode = JSON.parse(themeMode);
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches || parsethemeMode === "dark") {
-  setTheme("dark")
-}
-  },[theme])
- 
+    if (
+      window.matchMedia("(prefers-color-scheme: dark)").matches ||
+      parsethemeMode === "dark"
+    ) {
+      setTheme("dark");
+    }
+  }, [theme]);
+
   return (
-    <section className="  overflow-hidden h-[95.4vh]">
-   <Navbar/>
+    <section className="overflow-hidden h-full">
+      <Navbar />
 
-      <main id="main" className=" flex overflow-hidden mt-12 ">
-        <h2 className="text-3xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
-          PORTFOLIO
+      <main id="main" className=" flex overflow-hidden mt-20">
+        <h2 className="text-3xl font-mono first-letter:text-4xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
+          GALLERY
         </h2>
 
-        <Swiper
-          style={{
-            
-            "--swiper-navigation-color": theme=== "light"?"#000":"#fff",
-            "--swiper-pagination-color": theme=== "light"?"#000":"#fff",
+        <motion.div
+          initial="initial"
+          animate="animate"
+          transition={{
+            staggerChildren: 0.05,
           }}
-          lazy={true}
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 5,
-            slideShadows: false,
-          }}
-          navigation={true}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="mySwiper sm:h-[70vh] w-screen  h-[70vh]  border-8 p-5 m-5 border-black border-opacity-[0.3] shadow-inner rounded-md  backdrop-blur-3xl border-double dark:border-white"
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-5 "
         >
-          <SwiperSlide
-            id="sliderImgWrapper"
-            className=" w-fit relative bg-transparent"
-          >
-            <div
-              id="sliderImg"
-              className="w-fit h-[85%] relative bg-transparent"
-            >
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              <div className="w-[60%] h-[30%] backdrop-blur-3xl bottom-3 right-2 rounded-md absolute pl-2">
-                <h6>Image title</h6>
-                <p>description</p>
-                <p>technical description</p>
+         {
+  images.map((entries, outerIndex) => {
+    return (
+      <div key={outerIndex} className="grid gap-4">
+        {entries[0]?.data?.map((ent, innerIndex) => {
+          return (
+            <motion.div key={innerIndex}
+              
+              variants={{
+                initial: {
+                  scale: 0.5,
+                  y: 50,
+                  opacity: 0,
+                },
+                animate: {
+                  scale: 1,
+                  y: 0,
+                  opacity: 1,
+                },
+              }}>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src={ent.src}
+                alt={ent.alt}
+              />
+            </motion.div>
+          );
+        })}
+      </div>
+    );
+  })
+}
+
+            {/* <div className="grid gap-4">
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+                  alt=""
+                />
               </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide id="sliderImgWrapper" className=" w-fit">
-            <div id="sliderImg" className="w-fit h-[85%]">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <div className="grid gap-4">
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+                  alt=""
+                />
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide id="sliderImgWrapper" className=" w-fit">
-            <div id="sliderImg" className="w-fit h-[85%]">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <div className="grid gap-4">
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                  alt=""
+                />
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide id="sliderImgWrapper" className=" w-fit">
-            <div id="sliderImg" className="w-fit h-[85%]">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide id="sliderImgWrapper" className=" w-fit">
-            <div id="sliderImg" className="w-fit h-[85%]">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide id="sliderImgWrapper" className=" w-fit">
-            <div id="sliderImg" className="w-fit h-[85%]">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide id="sliderImgWrapper" className=" w-fit ">
-            <div id="sliderImg" className="w-fit h-[85%]">
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </div>
-          </SwiperSlide>
-
-          {/* <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide> */}
-        </Swiper>
+            <div className="grid gap-4">
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+                  alt=""
+                />
+              </div>
+            </div> */}
+        </motion.div>
       </main>
-      
+
+      <Footer />
     </section>
   );
 };
+const Footer = () => {
+  return (
+    <footer className="mt-12">
+      <p className="text-center text-2xl text-zinc-400">
+        Made with ❤️ by{" "}
+        <a href="#" className="text-red-300 hover:underline">
+          @Okechukwudaniel
+        </a>
+      </p>
+    </footer>
+  );
+};
+const images =
+[
+  
+   [{data:[ {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },
+    {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },
+    {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    }]}]
+  ,
+  [{data:
+   [ {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },
+    {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },
+    {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },] }]
+  ,
+  [{data:
+   [ {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },
+    {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },
+    {
+   src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
+   alt:""
+    },] }]
+  ,
+ 
+]
 
 export default PortfolioPage;
