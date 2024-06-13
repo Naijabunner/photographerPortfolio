@@ -6,7 +6,7 @@ import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
 import image from "../../../public/ptphoto.jpg"
  const Aboutpg = () => {
   return (
-    <div className="min-h-screen bg-zinc-900 px-4 py-12 pt-20 text-zinc-50">
+    <div className="min-h-screen dark:bg-zinc-900 px-4 py-12 pt-20 text-zinc-50">
       <motion.div
         initial="initial"
         animate="animate"
@@ -55,11 +55,11 @@ const Block = ({ className, ...rest }) => {
 
 
 const AboutBlock = () => (
-  <Block className="col-span-12 mt-14 text-3xl leading-snug">
+  <Block className="col-span-12 mt-14 text-3xl leading-snug dark:bg-zinc-800 bg-zinc-50">
           <img src={image} className=" float-end ml-3 w-40 rounded-lg" alt="" srcset="" />
-    <p className=" text-justify">
+    <p className=" text-zinc-900 dark:text-zinc-400 text-justify">
       My passion is building cool stuff.{" "}
-      <span className="text-zinc-400">
+      <span className=" text-zinc-500 dark:text-zinc-400">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ab odit maxime eum aliquid inventore, autem dolores omnis doloremque. Modi placeat dolore doloremque quam! Molestias, omnis aperiam perferendis exercitationem placeat nemo. Repellat minus libero distinctio perspiciatis aperiam eum iure porro, reiciendis, rerum magnam, beatae dolorum quia eligendi optio commodi? Dolore, nesciunt porro quidem error consequatur nam magni ipsum dicta suscipit unde tenetur nostrum alias, voluptate recusandae laudantium in? Repudiandae non minus tenetur mollitia ipsa rerum eaque laborum consectetur tempora in?
       </span>
     </p>  

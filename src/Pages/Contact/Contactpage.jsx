@@ -7,8 +7,8 @@ import { SiWhatsapp, SiTiktok, SiInstagram, SiDiscord, SiX, SiGmail, SiLinkedin}
 
  const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-zinc-900 px-4 py-12 pt-20 text-zinc-50">
-      <h2 className="text-3xl font-mono first-letter:text-4xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
+    <div className="min-h-screen dark:bg-zinc-900 px-4 py-12 pt-20 text-zinc-50">
+      <h2 className="text-3xl font-mono first-letter:text-4xl mt-5 ml-10 font-semibold text-center flex justify-center items-center text-zinc-800 dark:text-white">
           REACH OUT TO ME
         </h2>
         <motion.div
@@ -177,7 +177,7 @@ const Footer = () => {
     <footer className="mt-12">
       <p className="text-center text-2xl text-zinc-400">
         Made with ❤️ by{" "}
-        <a href="#" className="text-red-300 hover:underline">
+        <a href="#" className=" text-red-600 dark:text-red-300 hover:underline">
           @Okechukwudaniel
         </a>
       </p>
