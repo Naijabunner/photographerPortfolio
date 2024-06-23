@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiTwitter, SiYoutube } from "react-icons/si";
+import { SiLinkedin, SiTiktok, SiX, SiWhatsapp } from "react-icons/si";
 import image from "/Logo.png"
 
 export const HomeGrid = () => {
@@ -84,20 +84,6 @@ const SocialsBlock = () => (
   <>
     <Block
       whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
-      }}
-      className="col-span-6 bg-red-500 md:col-span-3"
-    >
-      <a
-        href="#"
-        className="grid h-full place-content-center text-3xl text-white"
-      >
-        <SiYoutube />
-      </a>
-    </Block>
-    <Block
-      whileHover={{
         rotate: "-2.5deg",
         scale: 1.1,
       }}
@@ -107,7 +93,21 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiGithub />
+        <SiWhatsapp />
+      </a>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-blue-500 md:col-span-3"
+    >
+      <a
+        href="#"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <SiLinkedin />
       </a>
     </Block>
     <Block
@@ -129,13 +129,13 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-500 md:col-span-3"
+      className="col-span-6 bg-slate-500 md:col-span-3"
     >
       <a
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiTwitter />
+        <SiX />
       </a>
     </Block>
   </>

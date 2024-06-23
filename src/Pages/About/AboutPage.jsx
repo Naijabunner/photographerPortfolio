@@ -23,6 +23,7 @@ import image from "../../../public/ptphoto.jpg"
   );
 };
 
+
 const Block = ({ className, ...rest }) => {
   return (
     <motion.div
