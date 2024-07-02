@@ -4,28 +4,28 @@ import Navbar from "../../Nav";
 import GalleryShimmer from "../../components/gallerySkeleton";
 import LazyImage from "../../components/lazyloader";
 import { ImageArr } from "../../Lib/Images";
-const image0 = React.lazy(() => import('../../../public/gallery/IMG(22).jpg'));
-const image1 = React.lazy(() => import('../../../public/gallery/IMG(23).jpg'));
-const image2 = React.lazy(() => import('../../../public/gallery/IMG(24).jpg'));
-const image3 = React.lazy(() => import('../../../public/gallery/IMG(25).jpg'));
-const image4 = React.lazy(() => import('../../../public/gallery/IMG(26).jpg'));
-const image5 = React.lazy(() => import('../../../public/gallery/IMG(27).jpg'));
-const image6 = React.lazy(() => import('../../../public/gallery/IMG(28).jpg'));
-const image7 = React.lazy(() => import('../../../public/gallery/IMG(29).jpg'));
-const image8 = React.lazy(() => import('../../../public/gallery/IMG(30).jpg'));
-const image9 = React.lazy(() => import('../../../public/gallery/IMG(31).jpg'));
-const image10 = React.lazy(() => import('../../../public/gallery/IMG(32).jpg'));
-const image11 = React.lazy(() => import('../../../public/gallery/IMG(33).jpg'));
-const image12 = React.lazy(() => import('../../../public/gallery/IMG(34).jpg'));
-const image13 = React.lazy(() => import('../../../public/gallery/IMG(35).jpg'));
-const image14 = React.lazy(() => import('../../../public/gallery/IMG(36).jpg'));
-const image15 = React.lazy(() => import('../../../public/gallery/IMG(37).jpg'));
-const image16 = React.lazy(() => import('../../../public/gallery/IMG(38).jpg'));
-const image17 = React.lazy(() => import('../../../public/gallery/IMG(39).jpg'));
-const image18 = React.lazy(() => import('../../../public/gallery/IMG(40).jpg'));
-const image19 = React.lazy(() => import('../../../public/gallery/IMG(41).jpg'));
-const image20 = React.lazy(() => import('../../../public/gallery/IMG(42).jpg'));
-const image21 = React.lazy(() => import('../../../public/gallery/IMG(43).jpg'));
+import image0 from '../../../public/gallery/IMG(22).jpg'
+import image1  from '../../../public/gallery/IMG(23).jpg';
+import image2  from '../../../public/gallery/IMG(24).jpg';
+import image3  from '../../../public/gallery/IMG(25).jpg';
+import image4  from '../../../public/gallery/IMG(26).jpg';
+import image5  from '../../../public/gallery/IMG(27).jpg';
+import image6  from '../../../public/gallery/IMG(28).jpg';
+import image7  from '../../../public/gallery/IMG(29).jpg';
+import image8  from '../../../public/gallery/IMG(30).jpg';
+import image9  from '../../../public/gallery/IMG(31).jpg';
+import image10  from '../../../public/gallery/IMG(32).jpg';
+import image11  from '../../../public/gallery/IMG(33).jpg';
+import image12  from '../../../public/gallery/IMG(34).jpg';
+import image13  from '../../../public/gallery/IMG(35).jpg';
+import image14  from '../../../public/gallery/IMG(36).jpg';
+import image15  from '../../../public/gallery/IMG(37).jpg';
+import image16  from '../../../public/gallery/IMG(38).jpg';
+import image17  from '../../../public/gallery/IMG(39).jpg';
+import image18  from '../../../public/gallery/IMG(40).jpg';
+import image19  from '../../../public/gallery/IMG(41).jpg';
+import image20  from '../../../public/gallery/IMG(42).jpg';
+import image21  from '../../../public/gallery/IMG(43).jpg';
 
 const PortfolioPage = () => {
   const [theme, setTheme] = useState("light");
@@ -200,15 +200,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(22).jpg',
+           src:image0,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(23).jpg',
+           src:image1,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(24).jpg',
+           src:image2,
            alt:""
             }
     ,] }]
@@ -216,15 +216,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(25).jpg',
+           src:image3,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(26).jpg',
+           src:image4,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(27).jpg',
+           src:image5,
            alt:""
             }
     ,] }]
@@ -232,15 +232,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(28).jpg',
+           src:image6,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(29).jpg',
+           src:image7,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(30).jpg',
+           src:image8,
            alt:""
             }
     ,] }]
@@ -248,15 +248,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(31).jpg',
+           src:image9,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(32).jpg',
+           src:image10,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(33).jpg',
+           src:image11,
            alt:""
             }
     ,] }]
@@ -264,15 +264,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(34).jpg',
+           src:image12,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(35).jpg',
+           src:image13,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(36).jpg',
+           src:image14,
            alt:""
             }
     ,] }]
@@ -280,15 +280,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(37).jpg',
+           src:image15,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(38).jpg',
+           src:image16,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(39).jpg',
+           src:image17,
            alt:""
             }
     ,] }]
@@ -296,15 +296,15 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(40).jpg',
+           src:image18,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(41).jpg',
+           src:image19,
            alt:""
             },
            {
-           src:'../../../public/gallery/IMG(42).jpg',
+           src:image20,
            alt:""
             }
     ,] }]
@@ -312,7 +312,7 @@ const images =
   [{data:
    [ 
     {
-           src:'../../../public/gallery/IMG(4).jpg',
+           src:image21,
            alt:""
             },
     ,] }]
