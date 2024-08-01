@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: "Rouge Script", cursive;
+  /* font-family: "Rouge Script", cursive; */
   font-weight: 400;
   font-style: normal;
 }

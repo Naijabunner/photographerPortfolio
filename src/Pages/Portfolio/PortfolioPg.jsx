@@ -1,31 +1,29 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Navbar from "../../Nav";
 import GalleryShimmer from "../../components/gallerySkeleton";
 import LazyImage from "../../components/lazyloader";
-import { ImageArr } from "../../Lib/Images";
-import image0 from '../../../public/gallery/IMG(22).jpg'
-import image1  from '../../../public/gallery/IMG(23).jpg';
-import image2  from '../../../public/gallery/IMG(24).jpg';
-import image3  from '../../../public/gallery/IMG(25).jpg';
-import image4  from '../../../public/gallery/IMG(26).jpg';
-import image5  from '../../../public/gallery/IMG(27).jpg';
-import image6  from '../../../public/gallery/IMG(28).jpg';
-import image7  from '../../../public/gallery/IMG(29).jpg';
-import image8  from '../../../public/gallery/IMG(30).jpg';
-import image9  from '../../../public/gallery/IMG(31).jpg';
-import image10  from '../../../public/gallery/IMG(32).jpg';
-import image11  from '../../../public/gallery/IMG(33).jpg';
-import image12  from '../../../public/gallery/IMG(34).jpg';
-import image13  from '../../../public/gallery/IMG(35).jpg';
-import image14  from '../../../public/gallery/IMG(36).jpg';
-import image15  from '../../../public/gallery/IMG(37).jpg';
-import image16  from '../../../public/gallery/IMG(38).jpg';
-import image17  from '../../../public/gallery/IMG(39).jpg';
-import image18  from '../../../public/gallery/IMG(40).jpg';
-import image19  from '../../../public/gallery/IMG(41).jpg';
-import image20  from '../../../public/gallery/IMG(42).jpg';
-import image21  from '../../../public/gallery/IMG(43).jpg';
+import image0 from '/gallery/IMG(22).jpg'
+import image1  from '/gallery/IMG(23).jpg';
+import image2  from '/gallery/IMG(24).jpg';
+import image3  from '/gallery/IMG(25).jpg';
+import image4  from '/gallery/IMG(26).jpg';
+import image5  from '/gallery/IMG(27).jpg';
+import image6  from '/gallery/IMG(28).jpg';
+import image7  from '/gallery/IMG(29).jpg';
+import image8  from '/gallery/IMG(30).jpg';
+import image9  from '/gallery/IMG(31).jpg';
+import image10  from '/gallery/IMG(32).jpg';
+import image11  from '/gallery/IMG(33).jpg';
+import image12  from '/gallery/IMG(34).jpg';
+import image13  from '/gallery/IMG(35).jpg';
+import image14  from '/gallery/IMG(36).jpg';
+import image15  from '/gallery/IMG(37).jpg';
+import image16  from '/gallery/IMG(38).jpg';
+import image17  from '/gallery/IMG(39).jpg';
+import image18  from '/gallery/IMG(40).jpg';
+import image19  from '/gallery/IMG(41).jpg';
+import image20  from '/gallery/IMG(42).jpg';
 
 const PortfolioPage = () => {
   const [theme, setTheme] = useState("light");
@@ -88,7 +86,7 @@ const ImagesContainer=()=>{
         {entries[0]?.data?.map((ent, innerIndex) => {
           return (
             <motion.div key={innerIndex}
-              className="rounded-lg bg-gray-300 bg-opacity-10"
+              className=" flex justify-center items-center shadow shadow-slate-400 bg-gray-900 border-double border-black border-4 p-5  bg-opacity-10"
               variants={{
                 initial: {
                   scale: 0.5,
@@ -116,85 +114,6 @@ const ImagesContainer=()=>{
   )
 }
 
-
-
-
-// const images =
-// [
-  
-//    [{data:[ {
-//     src:'../../../public/gallery/IMG(22).jpg',
-//    alt:""
-//     },
-//    {
-//    src:'../../../public/gallery/IMG(23).jpg',
-//    alt:""
-//     },
-//    {
-//    src:'../../../public/gallery/IMG(24).jpg',
-//    alt:""
-//     },
-    
-//   ]}]
-//   ,
-//   [{data:
-//    [{
-//     src:'../../../public/gallery/IMG(25).jpg',
-//     alt:""
-//      },
-//     {
-//     src:'../../../public/gallery/IMG(26).jpg',
-//     alt:""
-//      },
-//     {
-//     src:'../../../public/gallery/IMG(27).jpg',
-//     alt:""
-//      },] }]
-//   ,
-//   [{data:
-//    [ {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },
-//     {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },
-//     {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },] }]
-//   ,
-//   [{data:
-//    [ {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },
-//     {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },
-//     {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },] }]
-//   ,
-//   [{data:
-//    [ {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },
-//     {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },
-//     {
-//    src:"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-//    alt:""
-//     },] }]
-//   ,
- 
-// ]
 const images =
 [
   [{data:
@@ -308,16 +227,6 @@ const images =
            alt:""
             }
     ,] }]
-  ,
-  [{data:
-   [ 
-    {
-           src:image21,
-           alt:""
-            },
-    ,] }]
-  ,
-
  
 ]
 
