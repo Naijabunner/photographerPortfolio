@@ -43,7 +43,7 @@ const PortfolioPage = () => {
     <section className="overflow-hidden h-full">
       <Navbar />
 
-      <main id="main" className=" flex overflow-hidden mt-20 m-5">
+      <main id="main" className=" flex overflow-hidden mt-24 m-5">
         <h2 className="text-3xl font-mono first-letter:text-4xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
           GALLERY
         </h2>
@@ -86,7 +86,7 @@ const ImagesContainer=()=>{
         {entries[0]?.data?.map((ent, innerIndex) => {
           return (
             <motion.div key={innerIndex}
-              className=" flex justify-center items-center shadow shadow-slate-400 bg-gray-900 border-double border-black border-4 p-5  bg-opacity-10"
+              className=" flex justify-center items-center shadow shadow-slate-400 bg-gray-900 border-double border-black border-4 p-3 sm:p-5  bg-opacity-10"
               variants={{
                 initial: {
                   scale: 0.5,

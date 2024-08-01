@@ -36,7 +36,7 @@ function App() {
       }
     >
       <div className=" dark:bg-[#0E0F10] min-h-screen">
-        <div className="absolute right-5 flex flex-col justify-center items-center z-20 bg-transparent cursor-pointer">
+        <div className="absolute sm:right-5 flex flex-col justify-center items-center z-20 bg-transparent cursor-pointer">
           <div className="w-1 dark:bg-white sm:h-[10vh] h-[20vh] bg-black z-50 opacity-[0.5]"></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
