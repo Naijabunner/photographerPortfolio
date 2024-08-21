@@ -1,5 +1,5 @@
 import "./App.css";
-import { useAnimate, stagger, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { Suspense, useEffect, useState } from "react";
 import Navbar from "./Nav";
 const RoutedPages = React.lazy(() => import("./Router"));

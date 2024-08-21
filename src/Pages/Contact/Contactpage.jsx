@@ -1,7 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { FaPhone } from "react-icons/fa";
 import { SiWhatsapp, SiTiktok, SiInstagram, SiDiscord, SiX, SiGmail, SiLinkedin} from "react-icons/si";
 
@@ -80,7 +78,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-green-600 md:col-span-3"
     >
       <a
-        href="#"
+         href="https://wa.link/gbyd8c"
+         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiWhatsapp />
@@ -108,7 +107,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-pink-500 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://www.instagram.com/greq__t?igsh=MWdrMzc0MW5rYTBkcg== "
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiInstagram />
@@ -122,7 +122,7 @@ const SocialsBlock = () => (
       className="col-span-6 bg-red-300 md:col-span-3"
     >
       <a
-        href="#"
+        href="mailto:jameskachi209@gmail.com"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiGmail />
@@ -136,7 +136,7 @@ const SocialsBlock = () => (
       className="col-span-6 bg-orange-500  md:col-span-3"
     >
       <a
-        href="#"
+        href="tel:+2347087442440"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <FaPhone />
@@ -164,7 +164,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-slate-500 md:col-span-3"
     >
       <a
-        href="#"
+         href="https://x.com/MiseGreat?t=W5vymVxmCUeaj_i6FJQ6VQ&s=08"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiX />

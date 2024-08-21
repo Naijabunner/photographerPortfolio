@@ -43,7 +43,7 @@ const PortfolioPage = () => {
     <section className="overflow-hidden h-full">
       <Navbar />
 
-      <main id="main" className=" flex overflow-hidden mt-24 m-5">
+      <main id="main" className=" flex overflow-hidden mt-20 m-5">
         <h2 className="text-3xl font-mono first-letter:text-4xl mt-5 ml-10 font-semibold text-center flex justify-center items-center dark:text-white">
           GALLERY
         </h2>

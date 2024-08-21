@@ -63,7 +63,7 @@ const HeaderBlock = () => (
       alt="avatar"
       className="mb-4 size-14 rounded-full"
     />
-    <h1 className="mb-12 text-5xl font-medium leading-tight">
+    <h1 className="mb-12 text-3xl md:text-5xl font-medium leading-tight">
       Hi, I'm James Onyekachi.{" "}
       <span className="text-zinc-600">
       And am showing you the world, through my lens
@@ -72,7 +72,7 @@ const HeaderBlock = () => (
     </h1>
     <a
       href="/contact"
-      className="flex items-center gap-1 text-2xl dark:text-red-300 text-red-600  hover:underline"
+      className="flex items-center gap-1 text-xl md:text-2xl dark:text-red-300 text-red-600  hover:underline"
     >
       Contact me <FiArrowRight />
     </a>
@@ -89,7 +89,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-green-600 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://wa.link/gbyd8c"
+        target="blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiWhatsapp />
@@ -131,7 +132,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-slate-500 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://x.com/MiseGreat?t=W5vymVxmCUeaj_i6FJQ6VQ&s=08"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiX />
@@ -141,11 +143,15 @@ const SocialsBlock = () => (
 );
 
 const AboutBlock = () => (
-  <Block className="col-span-12 text-3xl leading-snug bg-zinc-50 dark:bg-zinc-800">
+  <Block className='col-span-12 text-xl md:text-3xl leading-snug bg-zinc-50 dark:bg-zinc-800'>
     <p>
       My passion is building cool stuff.{" "}
-      <span className="text-zinc-600 dark:text-zinc-400">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ab odit maxime eum aliquid inventore, autem dolores omnis doloremque. Modi placeat dolore doloremque quam! Molestias, omnis aperiam perferendis exercitationem placeat nemo. Repellat minus libero distinctio perspiciatis aperiam eum iure porro, reiciendis, rerum magnam, beatae dolorum quia eligendi optio commodi? Dolore, nesciunt porro quidem error consequatur nam magni ipsum dicta suscipit unde tenetur nostrum alias, voluptate recusandae laudantium in? Repudiandae non minus tenetur mollitia ipsa rerum eaque laborum consectetur tempora in?
+      <span className='text-zinc-600 dark:text-zinc-400'>
+        A creative and ambitious individual with a passion for storytelling and
+        visual expression. As a recent graduate (Class of 2023) and current
+        serving corps member, I'm dedicated to making a positive impact in my
+        community and beyond With a strong foundation in video editing,
+        photography....
       </span>
     </p>
   </Block>
@@ -153,16 +159,18 @@ const AboutBlock = () => (
 
 const LocationBlock = () => (
   <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3 bg-zinc-50 dark:bg-zinc-800">
-    <FiMapPin className="text-3xl" />
+    <FiMapPin className="text-xl md:text-3xl" />
     <p className="text-center text-2xl text-zinc-600">Lagos, Nigeria</p>
   </Block>
 );
 
 const GalleryBlock = () => (
-  <Block className="col-span-12 md:col-span-9 md:flex justify-between align-middle text-4xl bg-zinc-50 dark:bg-zinc-800">
+  <Block className="col-span-12 md:col-span-9 md:flex justify-between align-middle text-2xl md:text-4xl bg-zinc-50 dark:bg-zinc-800">
     <p> Take a look at some my work....</p>
-    <h2 className=" hover:cursor-pointer hover:text-red-300 hover:underline">
-    My Gallery
+    <h2 className=" hover:cursor-pointer hover:text-red-300 hover:underline text-xl md:text-2xl">
+      <a href="/gallery">
+      My Gallery
+      </a>
         <FiArrowRight />
     </h2>
   </Block>
@@ -171,7 +179,7 @@ const GalleryBlock = () => (
 const Footer = () => {
   return (
     <footer className="mt-12">
-      <p className="text-center text-2xl text-zinc-600">
+      <p className="text-center text-lg md:text-2xl text-zinc-600">
         Made with ❤️ by{" "}
         <a href="#" className="dark:text-red-300 text-red-600  hover:underline">
           @Okechukwudaniel
